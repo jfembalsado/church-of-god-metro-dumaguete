@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church of God Negros Island Philippines Inc.</title>
+    <style>
+        /* Modern Church Brand Colors & Variables */
+        :root {
+            --primary: #0f172a; /* Deep Navy */
+            --secondary: #1e293b;
+            --accent: #b45309; /* Soft Gold/Amber */
+            --text-light: #f8fafc;
+            --text-dark: #334155;
+            --bg-light: #f1f5f9;
+        }
+
+        /* Basic Structural Resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Global Reusable Layout Components */
+        header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: #cbd5e1;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: var(--text-light);
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--accent);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-left: 5px solid var(--accent);
+            padding-left: 0.75rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            color: var(--accent);
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        /* Bilingual Two-Column System Layout */
+        .bilingual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .bilingual-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .lang-column {
+            background: #fafafa;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border-top: 3px solid var(--secondary);
+        }
+
+        .lang-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Interactive Connect Hub Form Elements */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--primary);
+        }
+
+        /* Footer Copyright Block */
+        footer {
+            background-color: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #fffbeb;
+            border-left: 4px solid var(--accent);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .service-time {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Branding Header -->
+    <header>
+        <h1>⛪ Church of God Negros Island Philippines Inc.</h1>
+        <p>COG Metro Dumaguete — "The pillar and ground of the truth" (1 Timothy 3:15)</p>
+    </header>
+
+    <!-- Anchored Navigation Bar -->
+    <nav>
+        <a href="#about">About the Pastor</a>
+        <a href="#doctrine">Statement of Faith</a>
+        <a href="#curriculum">Discipleship</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#connect">Connect</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- 1. Senior Leadership Block -->
+        <section id="about" class="card">
+            <h2>About the Pastor / Mahitungod sa Pastor</h2>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <div class="lang-title">English</div>
+                    <p><strong>Pastor Jolly Forrosuelo Embalsado</strong> serves as the Senior Pastor and spiritual overseer of Church of God Metro Dumaguete. With a profound calling to the Negros Island region, he has dedicated his life to establishing a Christ-centered, Pentecostal community focused on authentic discipleship, strong family altars, and pastoral holiness.</p>
+                    <p style="margin-top:0.5rem;">Known for his passionate expository preaching style, he bridges deep scriptural patterns with practical daily living, modeling the conviction that a leader's home is their very first field of influence.</p>
+                </div>
+                <div class="lang-column">
+                    <div class="lang-title">Cebuano</div>
+                    <p>Si <strong>Pastor Jolly Forrosuelo Embalsado</strong> mao ang Senior Pastor ug espirituhanong magatutok sa Church of God Metro Dumaguete. Tungod sa iyang lawom nga tawag sa rehiyon sa Negros Island, iyang gigahin ang iyang kinabuhi sa pagtukod og komunidad nga nasentro kang Kristo, nagpabili sa tinuoray nga pagkadisipulo, altar sa pamilya, ug balaang pagkinabuhi.</p>
+                    <p style="margin-top:0.5rem;">Nailhan siya sa iyang madasigon nga estilo sa pagwali, diin iyang gisumpay ang kamatuoran sa Kasulatan ngadto sa adlaw-adlaw na pagkinabuhi, ug nagpamatood nga ang panimalay mao ang unang natad sa ministeryo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Core Full Gospel Doctrinal Foundations -->
+        <section id="doctrine" class="card">
+            <h2>Statement of Faith / Deklarasyon sa Pagtoo</h2>
+            
+            <h3>1. The Holy Scriptures / Ang Balaang Kasulatan</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column"><p>We believe the entire Bible is the inspired and infallible Word of God, serving as our final supreme authority for lifestyle and doctrine.</p></div>
+                <div class="lang-column"><p>Nagatuo kami nga ang tibuok Biblia nagagikan sa inspirasyon sa Dios ug mao ang bugtong sumbanan sa pagkinabuhi ug doktrina.</p></div>
+            </div>
+
+            <h3>2. The Triune God / Ang Triunong Dios</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column"><p>Belief in one eternal God existing in three co-equal persons: the Father, the Son (Jesus Christ), and the Holy Spirit.</p></div>
+                <div class="lang-column"><p>Nagatuo sa usa ka Dios nga nagalungtad sa tulo ka Persona: ang Amahan, ang Anak, ug ang Espiritu Santo.</p></div>
+            </div>
+
+            <h3>3. Salvation by Grace / Ang Kaluwasan pinaagi sa Grasya</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column"><p>Salvation is obtained entirely by grace through personal repentance and faith in the precious shed blood of Jesus Christ.</p></div>
+                <div class="lang-column"><p>Ang kaluwasan madawat lamang pinaagi sa grasya tungod sa paghinulsol ug pagtoo sa dugo ni Hesus nga giula sa krus.</p></div>
+            </div>
+
+            <h3>4. Baptism in the Holy Spirit / Ang Baptismo sa Espiritu Santo</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column"><p>An empowerment subsequent to salvation, traditionally accompanied by the scriptural physical evidence of speaking in other tongues.</p></div>
+                <div class="lang-column"><p>Gahom nga madawat human sa kaluwasan, nga gina-ubanan sa timaan sa pagpamulong sa laing pinulongan sumala sa Kasulatan.</p></div>
+            </div>
+
+            <h3>5. Sanctification / Ang Pagbalaan</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column"><p>The progressive work of the Holy Spirit in the believer's life, separating us from worldly conformity and progressively making us more like Christ.</p></div>
+                <div class="lang-column"><p>Ang patuloy na gawain sa Espiritu Santo sa buhay ng nagtotoo, paghiwalay sa atin gikan sa kalibutan ug ginagawang katulad ni Kristo.</p></div>
+            </div>
+        </section>
+
+        <!-- 3. Discipleship Class Lessons Matrix -->
+        <section id="curriculum" class="card">
+            <h2>4-Week New Believers' Curriculum / 4-ka-Semana nga Klase sa Pundasyon</h2>
+            
+            <h3>Week 1: Salvation by Grace (Kaluwasan pinaagi sa Grasya)</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <p><strong>Theme:</strong> Salvation is a complete gift from God (Ephesians 2:8-9). We cannot earn it through human rituals, good works, or religious activities. It requires turning away from sin and surrendering completely to Christ.</p>
+                    <div class="highlight-box">
+                        <strong>Key Scripture:</strong> "For by grace you have been saved through faith, and that not of yourselves; it is the gift of God."
+                    </div>
+                </div>
+                <div class="lang-column">
+                    <p><strong>Tema:</strong> Ang kaluwasan usa ka gasa sa Dios (Efeso 2:8-9). Dili kini makuha pinaagi sa relihiyon o maayong buhat. Nagkinahanglan kini og paghinulsol ug hingpit na pagtugyan sa kinabuhi kang Kristo.</p>
+                    <div class="highlight-box">
+                        <strong>Kasulatan:</strong> "Tungod sa grasya kayo naligtas pinaagi sa pagtoo, ug dili ito galing sa inyo; ito ang gasa ni Dios."
+                    </div>
+                </div>
+            </div>
+
+            <h3>Week 2: The Authority of the Word (Awtoridad sa Pulong sa Dios)</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <p><strong>Theme:</strong> The Bible is our absolute foundation and final authority (2 Timothy 3:16-17). Every belief and practice must align with Scripture. Personal feelings, traditions, or cultural norms cannot override biblical truth.</p>
+                    <div class="highlight-box">
+                        <strong>Key Scripture:</strong> "All Scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness."
+                    </div>
+                </div>
+                <div class="lang-column">
+                    <p><strong>Tema:</strong> Ang Biblia mao ang ating pundasyon at bugtong sumbatan (2 Timoteo 3:16-17). Ang bawat paniniwala at gawi dapat sumunod sa Kasulatan. Ang mga damdaman, tradisyon, o kultura dili makasulong sa kamatuoran ng Dios.</p>
+                    <div class="highlight-box">
+                        <strong>Kasulatan:</strong> "Ang tibuok Kasulatan nagagikan sa inspirasyon ng Dios, at kapaki-pakinabang alang sa turuan, pa-usisa, pagbabago, at pagsanay sa katarungalan."
+                    </div>
+                </div>
+            </div>
+
+            <h3>Week 3: Baptism in the Holy Spirit (Baptismo sa Espiritu Santo)</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <p><strong>Theme:</strong> Baptism in the Holy Spirit is a distinct, empowering experience available to all believers (Acts 2:38-39). The biblical sign of this baptism is speaking in other tongues as the Spirit gives utterance (Acts 2:4). This is not ecstasy or emotion, but obedience to the Holy Spirit's control.</p>
+                    <div class="highlight-box">
+                        <strong>Key Scripture:</strong> "And they were all filled with the Holy Spirit and began to speak with other tongues, as the Spirit gave them utterance." (Acts 2:4)
+                    </div>
+                </div>
+                <div class="lang-column">
+                    <p><strong>Tema:</strong> Ang Baptismo sa Espiritu Santo mayroon kalusugan na karanasan para sa lahat ng nagtotoo (Mga Gawain 2:38-39). Ang timaan ay ang pagpamulong sa laing pinulongan gaya ng binibigyan ng salita ng Espiritu Santo (Mga Gawain 2:4). Hindi ito sigla man lang kundi obediensya sa Espiritu Santo.</p>
+                    <div class="highlight-box">
+                        <strong>Kasulatan:</strong> "At puno lahat ng Espiritu Santo at nagsimulang magsalita ng ibang mga wika, ayon sa ibinigay ng Espiritu Santo sa kanila." (Mga Gawain 2:4)
+                    </div>
+                </div>
+            </div>
+
+            <h3>Week 4: Living a Holy Life (Pamumuhay ng Balaang Buhay)</h3>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <p><strong>Theme:</strong> Holiness is not optional for disciples of Christ; it is the calling of every believer (1 Peter 1:15-16). True Christianity transforms behavior, relationships, and priorities. We are called to separate ourselves from worldly conformity and live as living sacrifices to God.</p>
+                    <div class="highlight-box">
+                        <strong>Key Scripture:</strong> "But as He who called you is holy, you also be holy in all your conduct; because it is written, 'Be holy, for I am holy.'" (1 Peter 1:15-16)
+                    </div>
+                </div>
+                <div class="lang-column">
+                    <p><strong>Tema:</strong> Ang pagbalaan dili optional; ito ang tawag sa bawat nagtotoo (1 Pedro 1:15-16). Ang tunay na Kristiyanismo nagbabago ng gawi, relasyon, at priyoridad. Tayo ay tawag na maghiwalay sa mundo at mamuhay bilang isang bukas na sakripisyo sa Dios.</p>
+                    <div class="highlight-box">
+                        <strong>Kasulatan:</strong> "Kundi tulad ng Siyang naghatid sa inyo ay banal, kayo naman ay maging banal sa lahat ng inyong gawi; dahil nasusulat, 'Maging banal, sapagkat Ako ay banal.'" (1 Pedro 1:15-16)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Service Schedule & Information -->
+        <section id="schedule" class="card">
+            <h2>Service Schedule / Oras ng Serbisyo</h2>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <h3>Weekly Services</h3>
+                    <div class="service-time">
+                        <strong>Sunday Morning Worship</strong><br>
+                        8:00 AM - 10:00 AM<br>
+                        <em>Main Sanctuary</em>
+                    </div>
+                    <div class="service-time">
+                        <strong>Wednesday Night Bible Study</strong><br>
+                        7:00 PM - 8:30 PM<br>
+                        <em>Fellowship Hall</em>
+                    </div>
+                    <div class="service-time">
+                        <strong>Friday Youth Night</strong><br>
+                        6:30 PM - 8:00 PM<br>
+                        <em>Youth Center</em>
+                    </div>
+                    <div class="service-time">
+                        <strong>Saturday Prayer Meeting</strong><br>
+                        6:00 AM - 7:00 AM<br>
+                        <em>Prayer Room</em>
+                    </div>
+                </div>
+                <div class="lang-column">
+                    <h3>Lingguang Mga Serbisyo</h3>
+                    <div class="service-time">
+                        <strong>Linggo Umaga Pagsamba</strong><br>
+                        8:00 AM - 10:00 AM<br>
+                        <em>Main Sanctuary</em>
+                    </div>
+                    <div class="service-time">
+                        <strong>Miyerkules Gabi Pag-aaral ng Biblia</strong><br>
+                        7:00 PM - 8:30 PM<br>
+                        <em>Fellowship Hall</em>
+                    </div>
+                    <div class="service-time">
+                        <strong>Biyernes Kabataan Gabi</strong><br>
+                        6:30 PM - 8:00 PM<br>
+                        <em>Youth Center</em>
+                    </div>
+                    <div class="service-time">
+                        <strong>Sabado Pag-iingat</strong><br>
+                        6:00 AM - 7:00 AM<br>
+                        <em>Prayer Room</em>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box" style="margin-top: 1.5rem;">
+                <strong>📍 Church Location:</strong> Metro Dumaguete, Dumaguete City, Negros Oriental, Philippines<br>
+                <strong>📞 Contact:</strong> For more information, please fill out the Connect Hub form below or reach out to our ministry team.
+            </div>
+        </section>
+
+        <!-- 5. Connect Hub / Interactive Contact Form -->
+        <section id="connect" class="card">
+            <h2>Connect Hub / Makipag-ugnayan</h2>
+            <div class="bilingual-grid">
+                <div class="lang-column">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions? Want to know more about our church community? Fill out the form and we'll be in touch shortly. Whether you're seeking salvation, want to join our discipleship classes, or simply need prayer support, we're here for you.</p>
+                </div>
+                <div class="lang-column">
+                    <h3>Makipag-ugnayan</h3>
+                    <p>May katanungan? Nais mo bang malaman ang higit pa tungkol sa aming komunidad? Punan ang form at makikipag-ugnayan kami sa iyo. Kung naghahanap ka ng kaluwasan, nais sumali sa klase, o kailangan ng prayar, nandito kami.</p>
+                </div>
+            </div>
+
+            <form style="margin-top: 2rem;">
+                <div class="form-group">
+                    <label for="name">Full Name / Buong Pangalan</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number / Numero ng Telepono</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Mensahe</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit">Send Message / Ipadala ang Mensahe</button>
+            </form>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#doctrine">Doctrine</a>
+            <a href="#curriculum">Discipleship</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#connect">Connect</a>
+        </div>
+        <p>&copy; 2024 Church of God Negros Island Philippines Inc. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Metro Dumaguete | Dumaguete City, Negros Oriental, Philippines</p>
+        <p style="margin-top: 1rem; color: var(--accent);">"The pillar and ground of the truth" (1 Timothy 3:15)</p>
+    </footer>
+
+</body>
+</html>
