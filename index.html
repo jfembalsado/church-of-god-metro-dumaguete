@@ -33,19 +33,49 @@
         header {
             background-color: var(--primary);
             color: var(--text-light);
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
             text-align: center;
             border-bottom: 4px solid var(--accent);
         }
 
-        header h1 {
+        header .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        header .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 1.5rem;
+        }
+
+        header .header-text h1 {
             font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
 
-        header p {
+        header .header-text p {
             color: #cbd5e1;
             font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            header .logo-container {
+                flex-direction: column;
+                margin-bottom: 1rem;
+            }
+
+            header .logo {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            header .header-text h1 {
+                font-size: 1.7rem;
+            }
         }
 
         nav {
@@ -213,8 +243,14 @@
 
     <!-- Main Branding Header -->
     <header>
-        <h1>⛪ Church of God Negros Island Philippines Inc.</h1>
-        <p>COG Metro Dumaguete — "The pillar and ground of the truth" (1 Timothy 3:15)</p>
+        <div class="logo-container">
+            <img src="logo.svg" alt="Church of God Negros Island Philippines Inc Logo" class="logo">
+            <div class="header-text">
+                <h1>Church of God Negros Island Philippines Inc.</h1>
+                <p>"The pillar and ground of the truth" (1 Timothy 3:15)</p>
+            </div>
+        </div>
+        <p style="color: #cbd5e1; font-size: 0.9rem; margin-top: 0.5rem;">COG Metro Dumaguete</p>
     </header>
 
     <!-- Anchored Navigation Bar -->
